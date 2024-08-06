@@ -1,17 +1,22 @@
 import { motion, useTransform } from "framer-motion";
 
 function SolutionsItem({ index, length, progress, solution }) {
+  const inSmallScreens = window.innerWidth < 768;
+  const rotateValues = !inSmallScreens
+    ? `${index % 2 === 0 ? index * 1 : index * -1}deg`
+    : "";
+
   const range = [index * 0.25, 1];
   const targetScale = [1, 1 - (length - index) * 0.05];
   const scale = useTransform(progress, range, targetScale);
 
   return (
-    <div className="sticky top-24 flex h-[80dvh] items-start justify-center">
+    <div className="sticky top-0 flex h-[80dvh] items-start justify-center overflow-y-auto lg:top-24">
       <motion.div
-        className="relative rounded-2xl text-white p-6"
+        className="relative rounded-2xl p-6 text-white"
         style={{
           top: `${index * 20}px`,
-          rotate: `${index % 2 === 0 ? index * 1 : index * -1}deg`,
+          rotate: rotateValues,
           scale,
           backgroundColor: solution.bgColor,
         }}

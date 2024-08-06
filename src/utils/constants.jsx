@@ -288,6 +288,7 @@ export const problems = [
           It's <strong className="underlined-word">the most engaging</strong>{" "}
           type of content on social media.
           <ResourceLink
+            withIcon={true}
             label="the most engaging content on social media statistic"
             link="https://www.statista.com/statistics/1273876/content-social-media-marketing-usa/"
           />{" "}
@@ -404,7 +405,7 @@ export const problems = [
           But that's simply an illusion, and if we keep thinking like this we
           will never stop scrolling because it's simply endless, we will still
           think that the next content might give us another
-          <ResourceLink link="https://www.theguardian.com/global/2021/aug/22/how-digital-media-turned-us-all-into-dopamine-addicts-and-what-we-can-do-to-break-the-cycle">
+          <ResourceLink withIcon={true} link="https://www.theguardian.com/global/2021/aug/22/how-digital-media-turned-us-all-into-dopamine-addicts-and-what-we-can-do-to-break-the-cycle">
             Dopamine Hit{" "}
           </ResourceLink>
         </p>

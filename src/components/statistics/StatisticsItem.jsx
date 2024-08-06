@@ -37,7 +37,11 @@ function StatisticsItem({ item, index }) {
       <p className="text-lg text-gray-500">
         {item.desc}
         {item.link && (
-          <ResourceLink label={`${item.desc} statistic resource`} link={item.link} />
+          <ResourceLink
+            label={`${item.desc} statistic resource`}
+            link={item.link}
+            withIcon={true}
+          />
         )}
       </p>
     </motion.div>

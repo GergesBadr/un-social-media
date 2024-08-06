@@ -1,9 +1,10 @@
-import { HiArrowUpRight } from "react-icons/hi2";
+import { HiLink } from "react-icons/hi2";
 
 function ResourceLink({
   children,
   link,
   label,
+  withIcon = false,
   text = "text-indigo-600 hover:text-indigo-700",
 }) {
   return (
@@ -14,13 +15,11 @@ function ResourceLink({
       className={`group/link ml-1 font-medium underline underline-offset-4 hover:no-underline ${text}`}
     >
       <span>{children}</span>
-      <span className="text-sm">
-        &#91;
-        <HiArrowUpRight className="inline duration-200 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
-        &#93;
-      </span>
+      {withIcon && (
+        <HiLink className="inline duration-200 group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+      )}
     </a>
   );
-} 
+}
 
 export default ResourceLink;

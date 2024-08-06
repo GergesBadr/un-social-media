@@ -54,18 +54,18 @@ function Reactions({ likesNum, commentsNum, sharesNum }) {
 function Actions() {
   return (
     <div className="grid grid-cols-3 border-y-2 border-gray-200 py-1">
-      <button className="flex items-center justify-center gap-3 rounded-lg py-2 text-gray-600 hover:bg-gray-100">
-        <SlLike className="size-6" />
+      <button className="flex items-center justify-center gap-1 rounded-lg py-2 text-gray-600 hover:bg-gray-100">
+        <SlLike className="size-6 shrink-0" />
         <span>Like</span>
       </button>
 
-      <button className="flex items-center justify-center gap-3 rounded-lg py-2 text-gray-600 hover:bg-gray-100">
-        <HiOutlineChatBubbleOvalLeft className="size-7" />
+      <button className="flex items-center justify-center gap-1 rounded-lg py-2 text-gray-600 hover:bg-gray-100">
+        <HiOutlineChatBubbleOvalLeft className="size-6 shrink-0" />
         <span>Comment</span>
       </button>
 
-      <button className="flex items-center justify-center gap-3 rounded-lg py-2 text-gray-600 hover:bg-gray-100">
-        <PiShareFatLight className="size-7" />
+      <button className="flex items-center justify-center gap-1 rounded-lg py-2 text-gray-600 hover:bg-gray-100">
+        <PiShareFatLight className="size-6 shrink-0" />
         <span>Share</span>
       </button>
     </div>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function ResourcesItem({ resource }) {
   return (
-    <div className="mx-3 h-[384px] w-[504px] rounded-3xl bg-indigo-100 p-3 shadow-sm">
+    <div className="mx-1.5 h-[204px] w-[344px] rounded-3xl bg-indigo-100 p-3 shadow-sm md:mx-3 md:h-[384px] md:w-[504px]">
       <div className="relative">
         {/* Thumbnail */}
         <img
@@ -12,7 +12,7 @@ function ResourcesItem({ resource }) {
           src={resource.imgSrc}
           alt={`${resource.imgAlt}, youtube video thumbnail.`}
           loading="lazy"
-          className="rounded-xl"
+          className="h-[180px] w-[320px] rounded-xl object-cover object-center md:h-[360px] md:w-[480px]"
         />
 
         {/* Important badge */}
