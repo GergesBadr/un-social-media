@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .responsive-container {
+    @apply mx-4 sm:mx-8 md:mx-16 lg:mx-24 xl:mx-32 2xl:mx-48;
+  }
+
+  .heading-1 {
+    @apply font-merienda text-[clamp(2.5rem,7vw,3.75rem)] font-light;
+  }
+
+  .heading-2 {
+    @apply font-merienda text-[clamp(2rem,5vw,2.75rem)] font-medium;
+  }
+
+  .heading-3 {
+    @apply font-merienda text-[clamp(1.75rem,3vw,2.25rem)] font-semibold;
+  }
+}
+
+@layer components {
+  /* Underlined word */
+  .underlined-word {
+    @apply relative before:absolute before:bottom-[calc(0.450em*-0.625)] before:left-0 before:right-0 before:h-[0.450em] before:bg-[url("./assets/images/underline.svg")];
+  }
+  .underlined-word::before {
+    background-size: 100%;
+  }
+
+  /* Bubble */
+  .bubble {
+    @apply absolute z-[-1] size-64 rounded-[52%_48%_73%27%/_37%_51%_49%_63%] bg-gradient-to-tr from-indigo-200 via-red-200 to-yellow-100 opacity-50;
+  }
+
+  /* Resources important badge */
+  .important-badge {
+    writing-mode: vertical-lr;
+  }
+  .important-badge::before {
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  }
+
+  /* Infinite scroll */
+  .infinite-scroll-container::before,
+  .infinite-scroll-container::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    z-index: 1;
+    width: 175px;
+    height: calc(100% - 24px);
+  }
+  .infinite-scroll-container::before {
+    left: 0;
+    background: linear-gradient(
+      to left,
+      rgb(255, 255, 255, 0),
+      rgb(255, 255, 255, 0.6)
+    );
+  }
+  .infinite-scroll-container::after {
+    right: 0;
+    background: linear-gradient(
+      to right,
+      rgb(255, 255, 255, 0),
+      rgb(255, 255, 255, 0.6)
+    );
+  }
+  @media (max-width: 768px) {
+    .infinite-scroll-container::before,
+    .infinite-scroll-container::after {
+      width: 25px;
+    }
+  }
+}
